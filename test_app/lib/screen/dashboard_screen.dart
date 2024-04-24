@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:test_app/screen/Radio_Screen.dart';
 import 'package:test_app/screen/arithmetic_screen.dart';
 import 'package:test_app/screen/circle_screen.dart';
 import 'package:test_app/screen/column_screen.dart';
@@ -45,6 +46,11 @@ class DashboardScreen extends StatelessWidget {
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const ColumnScreen()));
               }, child: Text("Column"))),
+          SizedBox(width: double.infinity,
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(context,//pushReplacement
+                    MaterialPageRoute(builder: (context)=>const RadioScreen()));
+              }, child: Text("Radio"))),
         ],
       ),
     );

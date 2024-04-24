@@ -8,20 +8,22 @@ class ColumnScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Column'),
+        backgroundColor: Colors.grey,
       ),
       body: Container(
+        width: double.infinity,
         color: Colors.yellow,
-        child: const Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch ,
           children: [
-            Icon(Icons.star,size:70),
-            Icon(Icons.star,size:70),
-            Icon(Icons.star,size:70),
+            ElevatedButton(onPressed: (){}, child: const Text('Button1')),
+            ElevatedButton(onPressed: (){}, child: const Text('Button1')),
+            ElevatedButton(onPressed: (){}, child: const Text('Button1')),
+
           ],
         ),
       ),
-
-
     );
   }
 }
