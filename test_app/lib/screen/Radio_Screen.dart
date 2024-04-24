@@ -18,7 +18,7 @@ class _RadioScreenState extends State<RadioScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[50],
+      backgroundColor: Colors.blueGrey[5],
       appBar: AppBar(
         title: const Text("Abhilekh"),
         backgroundColor: Colors.lightGreen,
