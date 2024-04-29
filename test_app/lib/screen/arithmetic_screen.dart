@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/app/models/arithmetic_model.dart';
 
+import '../models/arithmetic_model.dart';
+
 class ArithmeticScreen extends StatefulWidget {
   const ArithmeticScreen({super.key});
 

@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/app/models/simple_interest_model.dart';
+
+import '../models/simple_interest_model.dart';
 
 class SimpleInterestScreen extends StatefulWidget {
   const SimpleInterestScreen({super.key});
@@ -32,7 +33,7 @@ class _SimpleInterestScreenState extends State<SimpleInterestScreen> {
       ),
 
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,15 +43,15 @@ class _SimpleInterestScreenState extends State<SimpleInterestScreen> {
                     principle = double.parse(value);
                   },
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(labelText: 'Enter principle', border: OutlineInputBorder())
+                  decoration: const InputDecoration(labelText: 'Enter principle', border: OutlineInputBorder())
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextFormField(
                 onChanged: (value){
                   rate= double.parse(value);
                 },
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: 'Enter rate',
+                decoration: const InputDecoration(labelText: 'Enter rate',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
@@ -60,15 +61,15 @@ class _SimpleInterestScreenState extends State<SimpleInterestScreen> {
                 ),
 
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 onChanged: (value){
                   time = double.parse(value);
                 },
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: 'Enter time', border: OutlineInputBorder()),
+                decoration: const InputDecoration(labelText: 'Enter time', border: OutlineInputBorder()),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -79,15 +80,15 @@ class _SimpleInterestScreenState extends State<SimpleInterestScreen> {
                       result = simpleInterestModel!.si();
                     });
                   },
-                  child: Text('Calculate', style: TextStyle(fontSize: 30),),
+                  child: const Text('Calculate', style: TextStyle(fontSize: 30),),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 'Result: $result',
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
               RichText(
                   text : const TextSpan(

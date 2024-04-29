@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:test_app/app/models/circle_model.dart';
+
+import '../models/circle_model.dart';
 
 class AreaCircle extends StatefulWidget {
   const AreaCircle({super.key});
@@ -28,13 +28,13 @@ class _AreaCircleState extends State<AreaCircle> {
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Form(
           key: mykey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
@@ -48,7 +48,7 @@ class _AreaCircleState extends State<AreaCircle> {
                   radius = double.parse(value);
                 },
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: 'Enter radius', border: OutlineInputBorder()),
               ),
 

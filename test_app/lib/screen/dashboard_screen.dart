@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:test_app/screen/Radio_Screen.dart';
 import 'package:test_app/screen/arithmetic_screen.dart';
 import 'package:test_app/screen/circle_screen.dart';
@@ -16,7 +14,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        title: Text("Dashboard"),
+        title: const Text("Dashboard"),
         centerTitle: true,
       ),
       body: Column(
@@ -25,32 +23,32 @@ class DashboardScreen extends StatelessWidget {
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context)=>const ArithmeticScreen() ));
-              }, child: Text("Arithmetic"))),
+              }, child: const Text("Arithmetic"))),
           SizedBox(width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const SimpleInterestScreen() ));
-              }, child: Text("SI"))),
+              }, child: const Text("SI"))),
           SizedBox(width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const AreaCircle()));
-              }, child: Text("Area of Circle"))),
+              }, child: const Text("Area of Circle"))),
           SizedBox(width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const TreeScreen()));
-              }, child: Text("Tree"))),
+              }, child: const Text("Tree"))),
           SizedBox(width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const ColumnScreen()));
-              }, child: Text("Column"))),
+              }, child: const Text("Column"))),
           SizedBox(width: double.infinity,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context,//pushReplacement
                     MaterialPageRoute(builder: (context)=>const RadioScreen()));
-              }, child: Text("Radio"))),
+              }, child: const Text("Radio"))),
         ],
       ),
     );
